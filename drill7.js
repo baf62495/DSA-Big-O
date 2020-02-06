@@ -1,0 +1,18 @@
+// 7. Compute the sequence
+// What does the following algorithm do? What is its runtime complexity? Explain your answer
+
+function compute(num) {
+	let result = [];
+	for (let i = 1; i <= num; i++) {
+		if (i === 1) {
+			result.push(0);
+		} else if (i == 2) {
+			result.push(1);
+		} else {
+			result.push(result[i - 2] + result[i - 3]);
+		}
+	}
+	return result;
+}
+
+// Constant O(n) - Because the time complexity grows in relation to the number input
